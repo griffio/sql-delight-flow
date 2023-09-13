@@ -20,7 +20,7 @@ fun selectAll(database: Database): Flow<List<Session>> {
 
 suspend fun main() = coroutineScope {
 
-    Database.Schema.create(driver).value // create table in local sessions.db
+    Database.Schema.create(driver) // create table in local sessions.db
 
     database.appQueries.deleteSessions()
 
