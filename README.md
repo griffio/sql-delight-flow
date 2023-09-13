@@ -1,5 +1,7 @@
 # SqlDelight 2.0
 
+[SqlDelight Coroutines](https://cashapp.github.io/sqldelight/2.0.0/jvm_sqlite/coroutines/)
+
 ## Flow example
 
 To consume a query as a Flow, add the coroutines extensions artifact as a dependency and use the extension functions it provides.
