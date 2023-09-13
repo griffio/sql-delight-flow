@@ -1,0 +1,17 @@
+CREATE TABLE session (
+    id INTEGER PRIMARY KEY NOT NULL,
+    rate_limit INTEGER NOT NULL,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+);
+
+deleteSessions:
+    DELETE FROM session;
+
+selectSessions:
+    SELECT *
+    FROM session;
+
+insertSession:
+    INSERT INTO session (id, rate_limit, created_at, updated_at)
+    VALUES(?, ?, ?, ?);
