@@ -4,9 +4,7 @@ import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
 import com.example.Database
 import com.example.Session
 import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.*
 import java.time.LocalDateTime
 
 val driver = JdbcSqliteDriver("jdbc:sqlite:sessions.db")
@@ -24,10 +22,19 @@ suspend fun main() = coroutineScope {
 
     database.appQueries.deleteSessions()
 
-    // Reactive Query will print new rows as they are inserted
-    val job = selectAll(database).onEach {
-        println(it.joinToString("\n"))
-    }.launchIn(this)
+// Reactive Query will print new rows as they are inserted
+
+// Use onEach and launchIn
+//    val job = selectAll(database).onEach {
+//        println(it.joinToString("\n"))
+//    }.launchIn(this)
+
+// Use launch and collect
+    val job= launch {
+        selectAll(database).collect {
+            println(it.joinToString("\n"))
+        }
+    }
 
     (1L .. 10L).forEach { id ->
         database.appQueries.insertSession(id, 2 * id, "${LocalDateTime.now()}", "${LocalDateTime.now()}")
