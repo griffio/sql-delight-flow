@@ -32,3 +32,10 @@ Shown below, the generated code will emit a change event for the mutated table (
     }
   }
 ```
+
+---
+
+### Issues/Bugs
+
+* When using aRETURNING clause or grouping statement returning data, notifications are not emitted to listeners
+  * AWAITING FIX https://github.com/cashapp/sqldelight/issues/4975
