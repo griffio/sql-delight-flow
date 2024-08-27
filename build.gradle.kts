@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.9.0"
     application
-    id("app.cash.sqldelight") version "2.0.1"
+    id("app.cash.sqldelight") version "2.0.2"
 }
 
 group = "griffio"
@@ -15,8 +15,8 @@ repositories {
 }
 
 dependencies {
-    implementation("app.cash.sqldelight:sqlite-driver:2.0.1")
-    implementation("app.cash.sqldelight:coroutines-extensions:2.0.1")
+    implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
+    implementation("app.cash.sqldelight:coroutines-extensions:2.0.2")
     testImplementation(kotlin("test"))
 }
 
@@ -24,7 +24,7 @@ sqldelight {
     databases {
         create("Database") {
             packageName.set("com.example")
-            dialect("app.cash.sqldelight:sqlite-3-38-dialect:2.0.1")
+            dialect("app.cash.sqldelight:sqlite-3-38-dialect:2.0.2")
         }
     }
 }

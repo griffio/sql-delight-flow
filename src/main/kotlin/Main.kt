@@ -29,7 +29,7 @@ suspend fun main() = coroutineScope {
 //        println(it.joinToString("\n"))
 //    }.launchIn(this)
 
-// Use launch and collect
+// or Use launch and collect
     val job= launch {
         selectAll(database).collect {
             println(it.joinToString("\n"))
