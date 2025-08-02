@@ -1,4 +1,4 @@
-# SqlDelight 2.0
+# SqlDelight 2.x
 
 [SqlDelight Coroutines](https://cashapp.github.io/sqldelight/2.0.0/jvm_sqlite/coroutines/)
 
