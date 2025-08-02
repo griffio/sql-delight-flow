@@ -38,4 +38,4 @@ Shown below, the generated code will emit a change event for the mutated table (
 ### Issues/Bugs
 
 * When using RETURNING clause or grouping statement returning data, notifications are not emitted to listeners
-  * AWAITING FIX https://github.com/cashapp/sqldelight/issues/4975
+  * MERGED https://github.com/sqldelight/sqldelight/pull/5851 
