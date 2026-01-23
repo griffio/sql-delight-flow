@@ -28,5 +28,5 @@ jobs:
         shell: pwsh
 
       - name: Run
-        run: .\gradlew.bat --no-daemon run
+        run: .\gradlew.bat --no-daemon --info verifyMainDatabaseMigration
         shell: pwsh
