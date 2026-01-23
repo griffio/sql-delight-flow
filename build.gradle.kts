@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "2.2.21"
     application
-        id("app.cash.sqldelight") version "2.2.1"
+    id("app.cash.sqldelight") version "2.2.1"
 }
 
 group = "griffio"
