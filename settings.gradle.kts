@@ -7,3 +7,7 @@ pluginManagement {
 }
 
 rootProject.name = "sql-delight-flow"
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+}
